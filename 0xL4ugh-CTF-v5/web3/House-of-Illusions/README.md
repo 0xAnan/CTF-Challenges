@@ -20,6 +20,8 @@ Full derivation of the overlap layout and the proxy guard is in the writeup.
 
 ## Files
 
+Everything below lives inside **[`House-of-Illusions.zip`](House-of-Illusions.zip)** (download it):
+
 | Path | What |
 |---|---|
 | `src/IllusionHouse.sol` | vulnerable implementation |
@@ -32,7 +34,8 @@ Full derivation of the overlap layout and the proxy guard is in the writeup.
 ## Run
 
 ```bash
-forge test -vv          # proves the exploit (8/8)
+unzip House-of-Illusions.zip -d House-of-Illusions && cd House-of-Illusions
+forge test -vv          # proves the exploit (8/8) — deps vendored, no install
 ```
 
 Against a live instance (local node shown):

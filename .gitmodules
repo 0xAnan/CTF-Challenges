@@ -1,6 +1,0 @@
-[submodule "0xL4ugh-CTF-v5/web3/House-of-Illusions/lib/forge-std"]
-	path = 0xL4ugh-CTF-v5/web3/House-of-Illusions/lib/forge-std
-	url = https://github.com/foundry-rs/forge-std
-[submodule "0xL4ugh-CTF-v5/web3/Void-Bound-Blade/lib/forge-std"]
-	path = 0xL4ugh-CTF-v5/web3/Void-Bound-Blade/lib/forge-std
-	url = https://github.com/foundry-rs/forge-std

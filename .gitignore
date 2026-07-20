@@ -1,14 +1,11 @@
-# foundry build artifacts
+# challenges ship as self-contained .zip archives (tracked on purpose)
+
+# never commit secrets
+.env
+.env.*
+
+# stray build artifacts if anyone unzips in place
 out/
 cache/
 broadcast/
-*.lock
-
-# deps are git submodules (lib/), never node_modules or zips
 node_modules/
-*.zip
-
-# never commit secrets / infra config
-.env
-.env.*
-!example.env
