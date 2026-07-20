@@ -1,0 +1,14 @@
+# foundry build artifacts
+out/
+cache/
+broadcast/
+*.lock
+
+# deps are git submodules (lib/), never node_modules or zips
+node_modules/
+*.zip
+
+# never commit secrets / infra config
+.env
+.env.*
+!example.env
